@@ -60,15 +60,23 @@ body{
     color: rgb(0, 255, 179);
     transition: color .3s;
 }
+
 .headpage ul > li > a{
     color: aliceblue;
     text-decoration: none;
+    transition: color .3s ease;
 }
+
+.headpage ul > li > a:hover{
+    color: rgb(0, 255, 179);
+}
+
 .headpage ul > li > span{
     font-family: 'Courier New', Courier, monospace;
     color: rgb(0, 255, 179);
     font-size: 0.9em;
 }
+
 .headpage button{
     background: none;
     margin-top: 1em;
@@ -100,22 +108,28 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
 }
+
 .hero > .container > h2 > span {
     color: rgb(0, 255, 179);
 }
+
 .hero > .container > span{
     color: rgb(0, 255, 179);
+    
     font-family: 'Courier New', Courier, monospace;
 }
+
 .hero > .container > h1{
     font-size: 3em;
     width: 550px;
     text-shadow: 3px 3px 8px rgb(0, 172, 188);
     transition: text-shadow 0.5s ease;
 }
+
 .hero > .container > h1:hover{
     text-shadow: none;
 }
+
 .hero > .container > p{
     width: 70%;
     line-height: 1.4em;
@@ -129,28 +143,34 @@ body{
     font-size: 1.5em;
     font-weight: 100;
 }
+
 .projects > .container h2 > span{
     color: rgb(0, 255, 179);
 }
+
 .projects > .container > div{
     position: relative;
     width: 800px;
     height: 400px;
     margin-top: 5em;
 }
+
 .projects > .container > div > h3 > span{
     font-family: 'Courier New', Courier, monospace;
     color: rgb(0, 255, 179);
 }
+
 .projects > .container > div > img {
     width: 100%;
     box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.545);
     border-radius: 50px;
     transition: opacity .3s;
 }
+
 .projects > .container > div > img:hover {
     opacity: 0.6;
 }
+
 .projects > .container > div > .frame {
     background-color: #3c3c3c;
     position: absolute;
@@ -173,9 +193,11 @@ body{
 .skills > .container >  h2 > span{
     color: rgb(0, 255, 179);
 }
+
 .skills > .container > div > .progress{
     width: 100%;
 }
+
 .skills > .container > div > .progress > .progressLouder{
     width: 80%;
     text-align: end;
@@ -185,42 +207,53 @@ body{
     background-color: rgb(0, 255, 179);
     color: #ffffff;
 }
+
 .skills > .container > div > .progress > .js{
     width: 70%;
 }
+
 .skills > .container > div > .progress > .boos{
     width: 80%;
 }
+
 .skills > .container > div > .progress > .react{
     width: 40%;
 }
+
 .skills > .container > div > .progress > .UI{
     width: 50%;
 }
+
 .skills > .container > div > .progress > .vue{
     width: 70%;
 }
+
 .contact > .container{
     margin-block:3em ;
     height: 300px;
 }
+
 .contact > .container > h2 {
     font-family: 'Courier New', Courier, monospace;
 }
+
 .contact > .container > h2 > span {
     color: rgb(0, 255, 179);
 }
+
 .contact > .container > h3 {
     font-size: 3em;
     color: aliceblue;
     text-align: center;
 }
+
 .contact > .container > div > p{
     width: 900px;
     text-align: center;
     color: #969696;
     margin-bottom: 2em;
 }
+
 .contact > .container > div > a {
     text-decoration: none;
     color: rgb(0, 255, 179);
@@ -235,13 +268,16 @@ body{
     border: 1px solid rgb(0, 255, 179);
     transition: background-color .3s ease;
 }
+
 .contact > .container > div > a:hover {
     background-color: rgba(0, 255, 179, 0.223);;
 }
+
 .sidelink > div > ul{
     position: fixed;
     bottom:150px;
 }
+
 .sidelink > div > ul > li > a > i{
     font-size: 1.8em;
     color: aliceblue;
@@ -249,16 +285,19 @@ body{
     margin-block: 0.3em;
     transition: top .3s ease;
 }
+
 .sidelink > div > ul > li > a > i:hover{
     position: relative;
     top:-5px;
     color: rgb(0, 255, 179);
     padding-block: .3em;
 }
+
 .sidelink > div > ul > li{
     list-style-type: none;
     margin-block: 1.4em;
 }
+
 .sidelink > div > ul> .line{
     position: absolute;
     left: 80%;
