@@ -188,14 +188,20 @@ body{
 
 .skills > .container >  h2{
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 2em;
+    font-weight: 100;
 }
 
 .skills > .container >  h2 > span{
     color: rgb(0, 255, 179);
 }
 
+.skills > .container > div{
+    margin-block: 2em;
+}
+
 .skills > .container > div > .progress{
-    width: 100%;
+    width: 70%;
 }
 
 .skills > .container > div > .progress > .progressLouder{
@@ -235,6 +241,7 @@ body{
 
 .contact > .container > h2 {
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
 }
 
 .contact > .container > h2 > span {
@@ -275,20 +282,20 @@ body{
 
 .sidelink > div > ul{
     position: fixed;
-    bottom:150px;
+    bottom:50px;
 }
 
 .sidelink > div > ul > li > a > i{
-    font-size: 1.8em;
+    font-size: 1.4em;
     color: aliceblue;
-    top: 0;
-    margin-block: 0.3em;
+    top: -5px;
+    padding-block: 0.3em;
     transition: top .3s ease;
 }
 
 .sidelink > div > ul > li > a > i:hover{
     position: relative;
-    top:-5px;
+    top: 5px;
     color: rgb(0, 255, 179);
     padding-block: .3em;
 }
@@ -301,8 +308,8 @@ body{
 .sidelink > div > ul> .line{
     position: absolute;
     left: 80%;
-    width: 1px;
-    height: 200px;
+    width: .5px;
+    height: 100px;
     background-color: aliceblue;
 }
 
