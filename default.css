@@ -165,6 +165,7 @@ body{
     box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.545);
     border-radius: 50px;
     transition: opacity .3s;
+    cursor: pointer;
 }
 
 .projects > .container > div > img:hover {
