@@ -1,2 +1,5 @@
 # gitpage
-still not responsive
+
+this is my git page
+
+with html css and javascript <3
