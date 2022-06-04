@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    width: fit-content;
 }
 
 body{
@@ -11,7 +12,7 @@ body{
 }
 
 .container{
-    max-width: 1000px;
+    max-width: 1100px;
     margin-inline: auto;
 }
 
@@ -19,8 +20,28 @@ body{
     padding-inline: 2.5em;
 }
 
-.headpage , .headpage ul{
+.headpage , .headpage > .nav{
     display: flex;
+}
+
+.headpage > .burger{
+    display: none;
+    top: 2.5em;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    display: grid;
+    width: 60px;
+    height: 60px;
+}
+
+.headpage > .burger > div{
+    display: none;
+    width: 100%;
+    margin-left: auto;
+    margin-block: 0.0.6em;
+    height: 6px;
+    background-color: aliceblue;
 }
 
 .headpage h2{
@@ -43,41 +64,41 @@ body{
     color: rgb(0, 255, 179);
 }
 
-.headpage ul {
+.headpage .nav {
     width: 100%;
     gap: 3em;
     justify-content: end;
     list-style-type: none;
 }
 
-.headpage ul > li {
+.headpage .nav > li {
     padding-block: 1em;
     height:20px;
 }
 
-.headpage ul > li:hover{
+.headpage .nav > li:hover{
     cursor: pointer;
     color: rgb(0, 255, 179);
     transition: color .3s;
 }
 
-.headpage ul > li > a{
+.headpage .nav > li > a{
     color: aliceblue;
     text-decoration: none;
     transition: color .3s ease;
 }
 
-.headpage ul > li > a:hover{
+.headpage .nav > li > a:hover{
     color: rgb(0, 255, 179);
 }
 
-.headpage ul > li > span{
+.headpage .nav > li > span{
     font-family: 'Courier New', Courier, monospace;
     color: rgb(0, 255, 179);
     font-size: 0.9em;
 }
 
-.headpage button{
+.nav > li > button{
     background: none;
     margin-top: 1em;
     height: 50px;
@@ -89,17 +110,69 @@ body{
     border: 1px solid rgb(0, 255, 179);
 }
 
-.headpage button:hover{
+.nav > li > button:hover{
     background-color: rgba(0, 255, 179, 0.089);
     transition: background-color .2s;
 }
 
+@media screen and (max-width: 950px){
+    
+    .headpage > .burger{
+        display: block;
+        position: fixed;
+        right: 4em;
+        cursor: pointer;
+    }
+    .headpage > .burger > div{
+        display: block;
+    }
+
+    .headpage > .nav{
+        display: none;
+        position: fixed;
+        right: 0;
+        z-index: 2;
+        height: 100%;
+        width: 60%;
+        font-size: 1.6em;
+        top: -1em;
+        background-color: #132e56;
+    }
+    
+    .headpage > .nav > li{
+        margin-block: 2em;
+        width: 50%;
+        font-size: 1.2em;
+        margin-inline: auto;
+    }
+
+    .headpage > .nav > li:first-child{
+        margin-top: 5em;
+    }
+
+    .headpage > .nav > li > button{
+        font-size: 1em;
+        position: relative;
+        top: -2em;
+        left: .6em;
+        font-weight: 100;
+        border: none;
+        margin: 0;
+    }
+}
+
+.hero{
+    padding-inline: 6em;
+    height: 500px;
+    margin-inline: auto;
+}
+
 .hero > .container{
     border-left: 1px solid aliceblue;
-    padding-left: 1em;
+    padding-inline: 1em;
     padding-top: 1em;
     height: 350px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin-inline: auto;
 }
 
@@ -130,9 +203,17 @@ body{
     text-shadow: none;
 }
 
+@media screen and (max-width: 950px) {
+    .hero > .container > h1{
+        font-size: 2.5em;
+    }
+}
+
 .hero > .container > p{
     width: 70%;
+    overflow: hidden;
     line-height: 1.4em;
+    text-overflow: ellipsis;
 }
 
 .projects > .container{
@@ -172,6 +253,7 @@ body{
     opacity: 0.6;
 }
 
+
 .projects > .container > div > .frame {
     background-color: #3c3c3c;
     position: absolute;
@@ -185,6 +267,19 @@ body{
 .projects > .container > div > .frame > a {
     color: rgb(0, 255, 179);
     text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+    .projects > .container > div > img{
+        width: 80%;
+    }
+    .projects > .container > div > .frame{
+        right: 7em;
+    }
+}
+
+.skills{
+    padding-inline: 6em;
 }
 
 .skills > .container >  h2{
@@ -202,7 +297,7 @@ body{
 }
 
 .skills > .container > div > .progress{
-    width: 70%;
+    width: 100%;
 }
 
 .skills > .container > div > .progress > .progressLouder{
@@ -213,6 +308,10 @@ body{
     height: 10px;
     background-color: rgb(0, 255, 179);
     color: #ffffff;
+}
+
+@media screen and (max-width: 950px){
+
 }
 
 .skills > .container > div > .progress > .js{
@@ -235,9 +334,14 @@ body{
     width: 70%;
 }
 
+.contact{
+    width: 100%;
+}
+
 .contact > .container{
     margin-block:3em ;
     height: 300px;
+    padding-inline: 2em;
 }
 
 .contact > .container > h2 {
@@ -256,7 +360,6 @@ body{
 }
 
 .contact > .container > div > p{
-    width: 900px;
     text-align: center;
     color: #969696;
     margin-bottom: 2em;
@@ -284,6 +387,7 @@ body{
 .sidelink > div > ul{
     position: fixed;
     bottom:50px;
+    right: 6em;
 }
 
 .sidelink > div > ul > li > a > i{
