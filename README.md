@@ -1,5 +1,8 @@
 # gitpage
 
-this is my git page
+this is portfolio to show my projects perfectly and more information on it ,
+i started for easiest way to show my experiences.
 
-with html css and javascript <3
+#biuld with
+
+html , css , vanilajs.
