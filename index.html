@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="./defaultT.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,54 +15,81 @@
     <title>Hossein Gharibzadeh</title>
 </head>
 
-<body>
-    <div class="headpage">
-        <h2>
-            Hello
-            <br>
-            <span>code's</span>
-        </h2>
-        <div class="burger" id="burger">
-            <div style="width: 30%;"></div>
-            <div style="width: 60%;"></div>
-            <div style="width: 100%;"></div>
+<body class="bg-bgblue px-2 sm:px-5 xl:px-5 text-white text-slate-200">
+    <div class="headpage flex max-w-7xl m-2 mx-auto ">
+        <div class="w-32 flex-1">
+            <h2 class="text-white text-3xl cursor-pointer w-5 group">
+                Hello
+                <br>
+                <span class="text-green-400 ml-10 group-hover:ml-0 transition-all duration-200">code's</span>
+            </h2>
         </div>
-        <ul class="nav" id="nav">
+        <div class="burger block md:hidden cursor-pointer felx-1 grid w-12 right-10 top-10 h-12 absolute" id="burger">
+            <div class="bg-white h-2" style="width: 30%;"></div>
+            <div class="bg-white h-2" style="width: 60%;"></div>
+            <div class="bg-white h-2" style="width: 100%;"></div>
+        </div>
+        <ul class="nav bg-sky-900 gird hidden top-0 h-full fixed right-0 text-center w-4/6 md:w-2/6 z-10" id="nav">
+            <li class="mt-20">
+                <span class="text-green-400 mr-2 text-lg">01.</span>
+                <a class="hover:text-green-300" href="#About">About</a>
+            </li>
+            <li class="mt-8">
+                <span class="text-green-400 mr-2 text-lg">02.</span>
+                <a class="hover:text-green-300" href="#Projects">Projects</a>
+            </li>
+            <li class="mt-8">
+                <span class="text-green-400 mr-2 text-lg">03.</span>
+                <a class="hover:text-green-300" href="#Skills">Skills</a>
+            </li>
+            <li class="mt-8">
+                <span class="text-green-400 mr-2 text-lg">404.</span>
+                <a class="hover:text-green-300" href="#Contact">Contact</a>
+            </li>
+            <li class="mt-8">
+                <button id="btn"
+                    class="border-green-400 border rounded-xl mx-auto p-2 text-green-400 hover:bg-green-200/20 transition-all duration-200"><a
+                        href="./hossein gharibzdeh.pdf">Resume</a></button>
+            </li>
+        </ul>
+        <ul class="hidden md:flex items-center gap-10">
             <li>
-                <span>01.</span>
-                <a href="#About">About</a>
+                <span class="text-green-400 mr-2 text-lg">01.</span>
+                <a class="hover:text-green-300" href="#About">About</a>
             </li>
             <li>
-                <span>02.</span>
-                <a href="#Projects">Projects</a>
+                <span class="text-green-400 mr-2 text-lg">02.</span>
+                <a class="hover:text-green-300" href="#Projects">Projects</a>
             </li>
             <li>
-                <span>03.</span>
-                <a href="#Skills">Skills</a>
+                <span class="text-green-400 mr-2 text-lg">03.</span>
+                <a class="hover:text-green-300" href="#Skills">Skills</a>
             </li>
             <li>
-                <span>404.</span>
-                <a href="#Contact">Contact</a>
+                <span class="text-green-400 mr-2 text-lg">404.</span>
+                <a class="hover:text-green-300" href="#Contact">Contact</a>
             </li>
             <li>
-                <button id="btn">Resume</button>
+                <button id="btn"
+                    class="border-green-400 border rounded-xl p-2 text-green-400 hover:bg-green-200/20 transition-all duration-200"><a
+                        href="./hossein gharibzdeh.pdf">Resume</a></button>
             </li>
         </ul>
     </div>
-    <div class="hero">
-        <div class="container">
+    <div class="hero my-10 bg-green-500/20 py-5 rounded-l-full">
+        <div class="container leading-7 border-l-2 pl-5 mx-auto max-w-6xl">
             <h2 id="About">
-                <span>01.</span>
+                <span class="text-green-400 mr-2 text-lg">01.</span>
                 About
             </h2>
             <br>
-            <span>hi my name is</span>
-            <h1>
+            <span class="text-green-400">hi my name is</span>
+            <h1 class="text-2xl md:text-4xl font-bold transition-all duration-200 hover:rotate-3 cursor-pointer">
                 Hossein Gharibzadeh
                 <br>
                 Front End Developer
             </h1>
-            <p>
+            <p class="max-w-5xl my-5">
                 I am a passionate junior front-end developer who looks for novel challenges in my field also a fast
                 learner
                 and flexible with new conditions and technologies, in love with artistic aspect of front-end development
@@ -71,158 +98,171 @@
             </p>
         </div>
     </div>
-    <div class="projects">
-        <div class="container">
-            <h2 id="Projects">
-                <span>02.</span>
+    <div class="projects my-10">
+        <div class="container max-w-6xl mx-auto">
+            <h2 id="Projects" class="text-2xl">
+                <span class="text-green-400 text-2xl mr-2 text-lg">02.</span>
                 Projects
             </h2>
-            <div>
-                <h3>
-                    <span>1.</span>
-                    Tokto
-                </h3>
-                <img onclick="location.href='https://github.com/ShervanGharibzade/PersonalPortfolioVue'"
-                    src="./images/p1.JPG" alt="photo" target="_blank">
-                <div class="frame">
-                    <a href="https://github.com/ShervanGharibzade/PersonalPortfolioVue" target="_blank">more info</a>
+            <div class="gallery">
+                <div class="w-full relative">
+                    <h3 class="mt-10 mb-5 text-xl">
+                        <span class="text-green-400">1.</span>
+                        Tokto
+                    </h3>
+                    <img class="rounded-3xl w-full md:w-3/4"
+                        onclick="location.href='https://github.com/ShervanGharibzade/PersonalPortfolioVue'"
+                        src="./images/p1.JPG" alt="photo" target="_blank">
+                    <div
+                        class="frame p-2 absolute bottom-0 md:bottom-auto md:top-2/4 right-1/4 text-center w-28 bg-zinc-800">
+                        <a class="text-green-300" href="https://github.com/ShervanGharibzade/PersonalPortfolioVue"
+                            target="_blank">more
+                            info</a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h3>
-                    <span>2.</span>
-                    Gigaland
-                </h3>
-                <img onclick="location.href='https://github.com/ShervanGharibzade/gigaland'" src="./images/p2.JPG"
-                    alt="photo">
-                <div class="frame">
-                    <a href="https://github.com/ShervanGharibzade/gigaland" target="_blank">more info</a>
+                <div class="w-full relative">
+                    <h3 class="mt-10 mb-5 text-xl">
+                        <span class="text-green-400">2.</span>
+                        Gigaland
+                    </h3>
+                    <img class="rounded-3xl w-full md:w-3/4"
+                        onclick="location.href='https://github.com/ShervanGharibzade/gigaland'" src="./images/p2.JPG"
+                        alt="photo">
+                    <div
+                        class="frame p-2 absolute bottom-0 md:bottom-auto md:top-2/4 right-1/4 text-center w-28 bg-zinc-800">
+                        <a class="text-green-300" href="https://github.com/ShervanGharibzade/gigaland"
+                            target="_blank">more info</a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h3>
-                    <span>2.</span>
-                    kayleebrown
-                </h3>
-                <img onclick="location.href='https://github.com/ShervanGharibzade/kayleebrown'" src="./images/p3.JPG"
-                    alt="photo">
-                <div class="frame">
-                    <a href="https://github.com/ShervanGharibzade/kayleebrown" target="_blank">more info</a>
+                <div class="w-full relative">
+                    <h3 class="mt-10 mb-5 text-xl">
+                        <span class="text-green-400">3.</span>
+                        kayleebrown
+                    </h3>
+                    <img class="rounded-3xl w-full md:w-3/4"
+                        onclick="location.href='https://github.com/ShervanGharibzade/kayleebrown'" src="./images/p3.JPG"
+                        alt="photo">
+                    <div
+                        class="frame p-2 absolute bottom-0 md:bottom-auto md:top-2/4 right-1/4 text-center w-28 bg-zinc-800">
+                        <a class="text-green-300" href="https://github.com/ShervanGharibzade/kayleebrown"
+                            target="_blank">more info</a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h3>
-                    <span>2.</span>
-                    WaxonVue
-                </h3>
-                <img onclick="location.href='https://github.com/ShervanGharibzade/WaxonVue'" src="./images/p4.JPG"
-                    alt="photo">
-                <div class="frame">
-                    <a href="https://github.com/ShervanGharibzade/WaxonVue" target="_blank">more info</a>
+                <div class="w-full relative">
+                    <h3 class="mt-10 mb-5 text-xl">
+                        <span class="text-green-400">4.</span>
+                        WaxonVue
+                    </h3>
+                    <img class="rounded-3xl w-full md:w-3/4"
+                        onclick="location.href='https://github.com/ShervanGharibzade/WaxonVue'" src="./images/p4.JPG"
+                        alt="photo">
+                    <div
+                        class="frame p-2 absolute bottom-0 md:bottom-auto md:top-2/4 right-1/4 text-center w-28 bg-zinc-800">
+                        <a class="text-green-300" href="https://github.com/ShervanGharibzade/WaxonVue"
+                            target="_blank">more info</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="skills">
-        <div class="container">
-            <h2 id="Skills">
-                <span>03.</span>
+    <div class="skills my-10 bg-green-500/20 py-5 rounded-t-full">
+        <div class="container mx-auto max-w-6xl">
+            <h2 id="Skills" class="text-2xl">
+                <span class="text-green-400 text-2xl mr-2 text-lg">03.</span>
                 skills
             </h2>
-            <div>
-                <h3>Html</h3>
-                <div class="progress">
-                    <div class="progressLouder">
+            <div class="w-5/6 my-16">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">Html</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-6/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>Css</h3>
-                <div class="progress">
-                    <div class="progressLouder">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">Css</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-5/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>Tailwindcss</h3>
-                <div class="progress">
-                    <div class="progressLouder">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">Tailwindcss</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-5/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>Javascript</h3>
-                <div class="progress">
-                    <div class="progressLouder js">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">Javascript</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-4/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>Boostarp</h3>
-                <div class="progress">
-                    <div class="progressLouder boos">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">Boostarp</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-5/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>React</h3>
-                <div class="progress">
-                    <div class="progressLouder react">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">React</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-3/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>UX/UI</h3>
-                <div class="progress">
-                    <div class="progressLouder IU">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">UX/UI</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-4/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>Vue</h3>
-                <div class="progress">
-                    <div class="progressLouder vue">
+                <div class="my-5 w-full">
+                    <h3 class="font-bold">Vue</h3>
+                    <div class="progress bg-white w-full my-2 h-2 rounded-full">
+                        <div class="progressLouder w-4/6 h-2 rounded-full bg-green-500">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="contact">
-        <div class="container">
-            <h2 id="Contact">
-                <span>404.</span>
+    <div class="contact my-10">
+        <div class="container mx-auto max-w-6xl">
+            <h2 id="Contact" class="text-white text-2xl">
+                <span class="text-green-400 text-lg">404.</span>
                 Contact
             </h2>
-            <h3>Get In Touch</h3>
-            <div>
-                <p>
+            <h3 class="font-bold text-2xl p-5 text-center">Get In Touch</h3>
+            <div class="h-full">
+                <p class="text-center my-3">
                     My inbox is always open. Whether you
                     have a question or just want to say hi, I’ll try my best to get back to you!
                 </p>
-                <a href="https://shervan.dev@gmail.com" rel="noopener noreferrer">click here</a>
+                <div class="text-center my-10">
+                    <a class="text-green-300 border rounded-xl p-2 border-green-300 hover:bg-green-300/20 transition-all duration-200"
+                        href="https://shervan.dev@gmail.com" rel="noopener noreferrer">click
+                        here</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="sidelink">
-        <div>
-            <ul>
-                <li>
-                    <a href="https://github.com/ShervanGharibzade" rel="noopener noreferrer">
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/hossein-gharibzadeh-41590422b/" rel="noopener noreferrer">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://shervan.dev@gmail.com" rel="noopener noreferrer">
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <div class="line"></div>
-            </ul>
+    <div class="sidelink my-10 bg-green-500/20 py-5 rounded-bl-full rounded-tr-full">
+        <div class="w-full mt-6 h-20 text-4xl text-center max-w-6xl mx-auto">
+            <a href="https://github.com/ShervanGharibzade" rel="noopener noreferrer">
+                <i class="fa fa-github text-2xl font-bold hover:text-green-300" aria-hidden="true"></i>
+            </a>
+            <a class="mx-10" href="https://www.linkedin.com/in/hossein-gharibzadeh-41590422b/"
+                rel="noopener noreferrer">
+                <i class="fa fa-linkedin text-2xl font-bold hover:text-green-300" aria-hidden="true"></i>
+            </a>
+            <a href="https://shervan.dev@gmail.com" rel="noopener noreferrer">
+                <i class="fa fa-envelope-o font-bold text-4xl hover:text-green-300" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
     <script src="app.js"></script>
