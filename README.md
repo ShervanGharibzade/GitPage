@@ -7,4 +7,4 @@ https://shervangharibzade.github.io/gitpage/
 
 # biuld with
 
-html , css , vanilajs.
+html , tailwindcss , vanilajs.
