@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Sixtyfour&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(25, 25, 25, 1) 28%,
+    rgba(0, 25, 22, 1) 53%,
+    rgb(0, 17, 15) 86%
+  );
+}
+
+.title-Header {
+  font-family: "Sixtyfour", sans-serif;
+}
+
+.color-animation {
+  animation: random-color 10s infinite linear;
+}
+
+@keyframes random-color {
+  0% {
+    color: red;
+    filter: blur(0px);
+  }
+  20% {
+    color: blue;
+    filter: blur(2px);
+  }
+  40% {
+    filter: blur(0px);
+    color: green;
+  }
+  60% {
+    filter: blur(2px);
+    color: purple;
+  }
+  80% {
+    filter: blur(0px);
+    color: orange;
+  }
+  100% {
+    filter: blur(2px);
+    color: red;
+  }
+}
+
+.main-animation {
+  position: fixed;
+  top: 150px;
+  margin-inline: auto;
+  width: 80%;
+  height: 100vh;
+  animation: rotate infinite 15s linear;
+  z-index: 0 !important;
+}
+.box-1,
+.box-2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  filter: blur(40px);
+  z-index: 0 !important;
+}
+
+.box-1 {
+  background-color: rgb(0, 183, 255);
+  animation: moition1 8s infinite ease-in-out;
+}
+.box-2 {
+  background-color: rgb(0, 255, 200);
+  animation: moition2 8s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@keyframes moition1 {
+  0% {
+    transform: translate(200px, 300px);
+  }
+  20% {
+    transform: translate(800px, 400px);
+  }
+  100% {
+    transform: translate(200px, 300px);
+  }
+}
+
+@keyframes moition2 {
+  0% {
+    transform: translate(800px, 400px);
+  }
+  20% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(800px, 400px);
+  }
+}
+
+.main-circle-project {
+  animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-item-1,
+.circle-item-2,
+.circle-item-3,
+.circle-item-4 {
+  animation: rotate-items infinite 15s linear;
+}
+
+@keyframes rotate-items {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
