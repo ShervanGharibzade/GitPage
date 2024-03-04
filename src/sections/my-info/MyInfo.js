@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function MyInfo({ setNameSection }) {
+export default function MyInfo({ setSectionIndex }) {
   return (
     <section
+      onMouseEnter={() => setSectionIndex(2)}
       style={{ zIndex: 5 }}
-      onMouseEnter={() => setNameSection("MyInfo")}
       className="w-full max-w-6xl mx-auto relative my-32 rounded-xl bg-black/30 ">
       <div className="text-white py-32">
         <h2 className="text-4xl uppercase text-center title-Header font-bold">

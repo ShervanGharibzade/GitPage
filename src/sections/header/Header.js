@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-export default function Header({ setNameSection }) {
+export default function Header({ setSectionIndex }) {
   return (
-    <header className="h-screen flex items-center justify-center py-32">
-      <div
-        onMouseEnter={() => setNameSection("Header")}
-        style={{ zIndex: 2 }}
-        className="text-white">
+    <header
+      onMouseEnter={() => setSectionIndex(0)}
+      className="h-screen flex items-center justify-center py-32">
+      <div style={{ zIndex: 2 }} className="text-white">
         <motion.h1
           initial={{
             y: -100,
