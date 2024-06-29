@@ -17,18 +17,20 @@ export default function Index() {
 
   return (
     <main>
-      <div className="max-w-[2000px] mx-auto px-10 py-5 ">
+      <div className="max-w-[2000px] mx-auto px-10 py-5 flex overflow-x-hidden">
         <Menu scrollOnPage={scrollOnPage} sectionIndex={sectionIndex} />
-        {[
-          <Header setSectionIndex={setSectionIndex} />,
-          <Projects setSectionIndex={setSectionIndex} />,
-          <MyInfo setSectionIndex={setSectionIndex} />,
-          <Contact setSectionIndex={setSectionIndex} />,
-        ].map((el, i) => (
-          <div key={i} ref={(element) => (ref.current[i] = element)}>
-            {el}
-          </div>
-        ))}
+        <div style={{ width: "calc(100% - 128px)" }}>
+          {[
+            <Header setSectionIndex={setSectionIndex} />,
+            <Projects setSectionIndex={setSectionIndex} />,
+            <MyInfo setSectionIndex={setSectionIndex} />,
+            <Contact setSectionIndex={setSectionIndex} />,
+          ].map((el, i) => (
+            <div key={i} ref={(element) => (ref.current[i] = element)}>
+              {el}
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
