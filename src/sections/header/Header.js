@@ -5,7 +5,8 @@ export default function Header({ setSectionIndex }) {
   return (
     <header
       onMouseEnter={() => setSectionIndex(0)}
-      className="h-screen flex items-center justify-center py-32">
+      className="h-screen flex items-center justify-center py-32"
+    >
       <div style={{ zIndex: 2 }} className="text-white">
         <motion.h1
           initial={{
@@ -14,18 +15,10 @@ export default function Header({ setSectionIndex }) {
           animate={{
             y: 0,
           }}
-          className="pb-5">
+          className="pb-5"
+        >
           <p className="text-center text-4xl title-Header">
             HOSSEIN GHARIBZADE
-            {/* <Typewriter
-              words={["HOSSEIN GHARIBZADE"]}
-              loop={1}
-              cursor
-              cursorStyle="_"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            /> */}
           </p>
           <br />
           <p className="color-animation text-6xl text-center font-semibold">
@@ -48,10 +41,11 @@ export default function Header({ setSectionIndex }) {
             height: "auto",
           }}
           transition={{ duration: 1 }}
-          className="text-lg w-[80%] text-zinc-400 mx-auto overflow-hidden">
+          className="text-lg w-[80%] text-zinc-400 mx-auto overflow-hidden"
+        >
           As a junior Front‑End developer{" "}
           <span className="text-white font-semibold">
-            with +1 year of experience
+            with +2 year of experience
           </span>
           , I am eager to work with senior developers to create exceptional
           products and grow within a team. I have experience with technologies{" "}

@@ -5,7 +5,8 @@ export default function MyInfo({ setSectionIndex }) {
     <section
       onMouseEnter={() => setSectionIndex(2)}
       style={{ zIndex: 5 }}
-      className="w-full max-w-6xl mx-auto relative my-32 rounded-xl bg-black/30 ">
+      className="w-full max-w-6xl mx-auto relative my-32 rounded-xl bg-black/30 "
+    >
       <div className="text-white py-32">
         <h2 className="text-4xl uppercase text-center title-Header font-bold">
           - MyInfo -
@@ -108,7 +109,9 @@ export default function MyInfo({ setSectionIndex }) {
             <span className="text-green-500">"Tailwindcss" ,</span>
             <span className="text-green-500">"Mui" ,</span>
             <span className="text-green-500">"Animation/Css" ,</span>
-            <span className="text-green-500">"Sass" ,</span>
+            <span className="text-green-500">"Storybook" ,</span>
+            <span className="text-green-500">"zustand" ,</span>
+            <span className="text-green-500">"Next-intl" ,</span>
           </p>
           <p className="flex gap-2 pl-6">
             <span className="text-green-500">"Next.js" ,</span>
