@@ -10,136 +10,71 @@
   font-family: "Nunito", sans-serif;
 }
 
+*::-webkit-scrollbar {
+  width: 12px; /* Scrollbar width */
+}
+
+*::-webkit-scrollbar-track {
+  background: #1e1e2f; /* Track color */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0f62c2; /* Thumb color */
+  border-radius: 10px; /* Optional: rounded corners */
+  border: 3px solid #1e1e2f; /* Creates padding around the thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #707070; /* Slightly lighter thumb on hover */
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #8b8b8b; /* Even darker thumb when clicked */
+}
+
 body {
   background: radial-gradient(
     circle,
-    rgba(25, 25, 25, 1) 28%,
-    rgba(0, 25, 22, 1) 53%,
-    rgb(0, 17, 15) 86%
+    rgba(15, 15, 30, 1) 30%,
+    rgb(10, 17, 70) 60%,
+    rgba(0, 5, 25, 1) 100%
   );
+  overflow: hidden;
+  background-size: 200% 200%; /* Makes the animation smooth by scaling the background */
+  animation: darkBluePulse 8s infinite alternate,
+    darkBlueShift 10s ease-in-out infinite;
 }
 
-.title-Header {
-  font-family: "Sixtyfour", sans-serif;
-}
-
-.color-animation {
-  animation: random-color 10s infinite linear;
-}
-
-@keyframes random-color {
+@keyframes darkBluePulse {
   0% {
-    color: red;
-    filter: blur(0px);
+    background-size: 100% 100%; /* Normal size */
+  }
+  50% {
+    background-size: 150% 150%; /* Scaled-up gradient */
+  }
+  100% {
+    background-size: 100% 100%; /* Back to normal size */
+  }
+}
+
+@keyframes darkBlueShift {
+  0% {
+    background-position: 0% 0%; /* Gradient starts at the top-left */
   }
   20% {
-    color: blue;
-    filter: blur(2px);
+    background-position: 50% 50%; /* Gradient shifts to the center */
   }
   40% {
-    filter: blur(0px);
-    color: green;
+    background-position: 100% 100%; /* Gradient moves to the bottom-right */
   }
   60% {
-    filter: blur(2px);
-    color: purple;
+    background-position: 100% 100%; /* Gradient moves to the bottom-right */
   }
   80% {
-    filter: blur(0px);
-    color: orange;
+    background-position: 50% 50%; /* Gradient shifts to the center */
   }
   100% {
-    filter: blur(2px);
-    color: red;
-  }
-}
-
-.main-animation {
-  position: fixed;
-  top: 150px;
-  margin-inline: auto;
-  width: 80%;
-  height: 100vh;
-  animation: rotate infinite 15s linear;
-  z-index: 0 !important;
-}
-.box-1,
-.box-2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  filter: blur(40px);
-  z-index: 0 !important;
-}
-
-.box-1 {
-  background-color: rgb(0, 183, 255);
-  animation: moition1 8s infinite ease-in-out;
-}
-.box-2 {
-  background-color: rgb(0, 255, 200);
-  animation: moition2 8s infinite ease-in-out;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1800deg);
-  }
-}
-
-@keyframes moition1 {
-  0% {
-    transform: translate(200px, 300px);
-  }
-  20% {
-    transform: translate(800px, 400px);
-  }
-  100% {
-    transform: translate(200px, 300px);
-  }
-}
-
-@keyframes moition2 {
-  0% {
-    transform: translate(800px, 400px);
-  }
-  20% {
-    transform: translate(100px, 100px);
-  }
-  100% {
-    transform: translate(800px, 400px);
-  }
-}
-
-.main-circle-project {
-  animation: rotate 15s infinite linear;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.circle-item-1,
-.circle-item-2,
-.circle-item-3,
-.circle-item-4 {
-  animation: rotate-items infinite 15s linear;
-}
-
-@keyframes rotate-items {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-360deg);
+    background-position: 0% 0%; /* Gradient starts at the top-left */
   }
 }
